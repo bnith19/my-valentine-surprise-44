@@ -120,16 +120,16 @@ const CollageSection = () => (
       {config.images.map((src, i) => (
         <div
           key={i}
-          className="group overflow-hidden rounded-2xl shadow-lg transition-transform duration-300 hover:scale-105"
+          className="group aspect-square overflow-hidden rounded-2xl shadow-lg transition-transform duration-300 hover:scale-105"
           style={{
             transform: `rotate(${i % 2 === 0 ? -2 : 2}deg)`,
           }}
         >
+
           <img
             src={src}
             alt={`Moment ${i + 1}`}
-            loading="lazy"
-            className="aspect-square w-full object-cover transition-transform duration-500 group-hover:scale-110"
+            className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
           />
         </div>
       ))}
