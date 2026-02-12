@@ -2,21 +2,22 @@
 
 export const config = {
   // Section 1: Intro
-  name: "XXX",
-  introHeading: "Hi {name} 💖",
+  name: "Babz",
+  introHeading: "Hi {name} 🐣💖",
   introSubtext:
-    "You make me laugh, you make my days brighter, and I made this just for you.",
-  ctaLabel: "Read my message below ↓",
+    "You make me laugh way more than you should and somehow makes chaos feels special, and I clearly LOVE your stupid ass enough to build this👀.",
+  ctaLabel: "Podhum keela Padingo ↓",
 
   // Section 2: Reasons
   reasonsTitle: "Reasons I Love You 💕",
   reasons: [
-    "You laugh at the dumbest jokes.",
-    "You make boring days fun.",
-    "You feel like home.",
-    "Your smile lights up my whole world.",
-    "You always know how to cheer me up.",
-    "You're the most beautiful person I know — inside and out.",
+    "You laugh at the dumbest jokes yet You’re smart in a way that’s actually attractive",
+    "You make the regular boring days fun for me bb, and i love it",
+    "You feel like home, more hotter and squishier😘",
+    "Being with you lights up my whole world❤️, and sometimes even burn it down but we dont care about that😂",
+    "You always know how to cheer me up. IYKYK🥰😏",
+    "You are unreal and stunning😍, but it’s what’s inside you that really got me."
+    "Not guessing. I KNOW🫣🙂‍↕️",
   ],
 
   // Section 3: Photo Collage
@@ -33,13 +34,13 @@ export const config = {
   ],
 
   // Section 4: Valentine Question
-  questionText: "Will you be my Valentine? 💘",
+  questionText: "So Will you be my Valentine? 💘",
   yesLabel: "Yes 💖",
   noLabel: "No 😈",
 
   // Section 5: Yes Modal
   modalTitle: "Yesss 😌",
-  modalSubtext: "Now you're a good girl 💖",
+  modalSubtext: "GOOD girl!!! 😏💖",
   modalCta: "Continue 💕",
 
   // Section 6: Finale
