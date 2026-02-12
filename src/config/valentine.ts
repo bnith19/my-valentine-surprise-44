@@ -12,19 +12,17 @@ export const config = {
   reasonsTitle: "Reasons I Love You 💕",
   reasons: [
     "You laugh at the dumbest jokes yet You’re smart in a way that’s actually attractive",
-    "You make the regular boring days fun for me bb, and i love it",
     "You feel like home, more hotter and squishier😘",
     "Being with you lights up my whole world❤️, and sometimes even burn it down but we dont care about that😂",
     "You always know how to cheer me up. IYKYK🥰😏",
-    "You are unreal and stunning😍, but it’s what’s inside you that really got me."
-    "Not guessing. I KNOW🫣🙂‍↕️",
+    "You are unreal and stunning😍, but it’s what’s inside you that really got me. Not guessing. I KNOW🫣🙂‍↕️",
   ],
 
   // Section 3: Photo Collage
   collageTitle: "Our Favourite Moments 📸",
   images: [
-    "https://drive.google.com/file/d/1Z8m9DX93eRNhv51TXw6LphcM269yyl5F/view?usp=sharing?w=400&h=400&fit=crop",
-    "https://drive.google.com/file/d/1GohKbxvyMfZGgUNnUxLnQPxmIKNhnLBc/view?usp=sharing?w=400&h=400&fit=crop",
+    "https://drive.google.com/uc?export=view&id=1GohKbxvyMfZGgUNnUxLnQPxmIKNhnLBc",
+    "https://drive.google.com/uc?export=view&id=1Z8m9DX93eRNhv51TXw6LphcM269yyl5F",
     "https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?w=400&h=400&fit=crop",
     "https://images.unsplash.com/photo-1522673607200-164d1b3ce551?w=400&h=400&fit=crop",
     "https://images.unsplash.com/photo-1543931412-46ee4ef52335?w=400&h=400&fit=crop",
@@ -45,7 +43,7 @@ export const config = {
 
   // Section 6: Finale
   finaleHeading: "Happy Valentine's Day Babzyma🐣",
-  finaleSubtext: "I Love You more than any words i could ever say! Be my forever bitch🥰",
+  finaleSubtext: "I Love You more than any words i could ever say! Be my forever bishhh🥰",
   replayLabel: "Replay 🔄",
   kissingGifUrl:
     "https://media.giphy.com/media/3oEjHV0z8S7WM4MwnK/giphy.gif",
