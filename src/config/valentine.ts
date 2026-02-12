@@ -21,8 +21,8 @@ export const config = {
   // Section 3: Photo Collage
   collageTitle: "Our Favourite Moments 📸",
   images: [
-    "https://drive.google.com/uc?export=view&id=1GohKbxvyMfZGgUNnUxLnQPxmIKNhnLBc",
-    "https://drive.google.com/uc?export=view&id=1Z8m9DX93eRNhv51TXw6LphcM269yyl5F",
+    "/images/img-1.jpg",
+    "/images/img-2.jpg",
     "https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?w=400&h=400&fit=crop",
     "https://images.unsplash.com/photo-1522673607200-164d1b3ce551?w=400&h=400&fit=crop",
     "https://images.unsplash.com/photo-1543931412-46ee4ef52335?w=400&h=400&fit=crop",
