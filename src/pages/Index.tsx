@@ -144,20 +144,27 @@ const QuestionSection = ({
   onYes: () => void;
 }) => {
   const [noCount, setNoCount] = useState(0);
-  const [noPos, setNoPos] = useState<{ top: string; left: string } | null>(null);
+  const [noPos, setNoPos] = useState<{ x: number; y: number }>({ x: 0, y: 0 });
   const [shake, setShake] = useState(false);
   const sectionRef = useRef<HTMLDivElement>(null);
 
   const handleNo = useCallback(() => {
-    setNoCount((c) => c + 1);
-    setShake(true);
-    setTimeout(() => setShake(false), 400);
+  setNoCount((c) => c + 1);
+  setShake(true);
+  setTimeout(() => setShake(false), 300);
 
-    // random position within section bounds
-    const top = 10 + Math.random() * 70;
-    const left = 10 + Math.random() * 70;
-    setNoPos({ top: `${top}%`, left: `${left}%` });
-  }, []);
+  if (!sectionRef.current) return;
+
+  const section = sectionRef.current;
+
+  const maxX = section.clientWidth - 140; // button width buffer
+  const maxY = section.clientHeight - 80; // button height buffer
+
+  const x = Math.random() * maxX - maxX / 2;
+  const y = Math.random() * maxY - maxY / 2;
+
+  setNoPos({ x, y });
+}, []);
 
   const yesScale = 1 + noCount * 0.15;
 
@@ -186,16 +193,16 @@ const QuestionSection = ({
 
         {/* No Button */}
         <button
+          onMouseEnter={handleNo}
           onClick={handleNo}
-          className="rounded-full bg-muted px-8 py-4 font-bold text-foreground shadow-md transition-all duration-200"
+          className="absolute rounded-full bg-muted px-8 py-4 font-bold text-foreground shadow-md"
           style={{
-            position: noPos ? "absolute" : "relative",
-            top: noPos?.top,
-            left: noPos?.left,
-            animation: shake ? "shake 0.4s ease-in-out" : "none",
+            transform: `translate(${noPos.x}px, ${noPos.y}px)`,
+            transition: "transform 0.1s ease-out", // ← SPEED (lower = faster)
+            animation: shake ? "shake 0.3s ease-in-out" : "none",
           }}
           aria-label="No"
-        >
+          >
           {config.noLabel}
         </button>
       </div>
