@@ -30,7 +30,7 @@ const IntroSection = () => {
   );
 };
 
-// ── Section 2: Reasons ──
+// ── Section 2: Reasons (Timeline) ──
 const ReasonsSection = () => {
   const [visible, setVisible] = useState<boolean[]>(
     Array(config.reasons.length).fill(false)
@@ -58,29 +58,53 @@ const ReasonsSection = () => {
     return () => observer.disconnect();
   }, []);
 
+  const reasons = config.reasons.slice(0, 5);
+
   return (
     <section
       id="reasons"
       className="flex min-h-screen flex-col items-center justify-center bg-card px-6 py-20"
     >
-      <h2 className="mb-12 text-4xl font-bold text-primary md:text-5xl">
+      <h2 className="mb-16 text-4xl font-bold text-primary md:text-5xl">
         {config.reasonsTitle}
       </h2>
-      <div className="flex w-full max-w-lg flex-col gap-5">
-        {config.reasons.map((reason, i) => (
-          <div
-            key={i}
-            ref={(el) => (refs.current[i] = el)}
-            className="rounded-2xl bg-secondary px-6 py-5 text-center text-lg font-medium text-foreground shadow-md transition-all duration-700"
-            style={{
-              opacity: visible[i] ? 1 : 0,
-              transform: visible[i] ? "translateY(0)" : "translateY(30px)",
-              transitionDelay: `${i * 120}ms`,
-            }}
-          >
-            💖 {reason}
-          </div>
-        ))}
+
+      {/* Timeline */}
+      <div className="relative w-full max-w-2xl">
+        {/* Vertical line */}
+        <div className="absolute left-1/2 top-0 h-full w-px -translate-x-1/2 bg-primary/30" />
+
+        {reasons.map((reason, i) => {
+          const isLeft = i % 2 === 0;
+          return (
+            <div
+              key={i}
+              ref={(el) => (refs.current[i] = el)}
+              className="relative mb-12 flex items-center last:mb-0"
+              style={{
+                opacity: visible[i] ? 1 : 0,
+                transform: visible[i]
+                  ? "translateX(0)"
+                  : isLeft
+                    ? "translateX(-40px)"
+                    : "translateX(40px)",
+                transition: `all 0.6s ease ${i * 150}ms`,
+              }}
+            >
+              {/* Dot on the line */}
+              <div className="absolute left-1/2 z-10 h-4 w-4 -translate-x-1/2 rounded-full bg-primary shadow-md shadow-primary/40" />
+
+              {/* Card – alternating side */}
+              <div
+                className={`w-[calc(50%-2rem)] rounded-2xl border border-primary/10 bg-secondary/80 px-5 py-4 text-base font-medium text-foreground shadow-lg backdrop-blur-sm ${
+                  isLeft ? "mr-auto text-right" : "ml-auto text-left"
+                }`}
+              >
+                <span className="text-primary">💖</span> {reason}
+              </div>
+            </div>
+          );
+        })}
       </div>
     </section>
   );
