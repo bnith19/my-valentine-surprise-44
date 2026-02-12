@@ -37,14 +37,14 @@ export const config = {
   noLabel: "No 😈",
 
   // Section 5: Yes Modal
-  modalTitle: "Yesss 😌",
-  modalSubtext: "GOOD girl!!! 😏💖",
+  modalTitle: "GOOD girl!!! 😏💖",
+  modalSubtext: "Nice Mudivu now better be ready for Dinner😙",
   modalCta: "Continue 💕",
 
   // Section 6: Finale
   finaleHeading: "Happy Valentine's Day Babzyma🐣",
-  finaleSubtext: "I Love You more than any words i could ever say! Be my forever bishhh🥰",
-  replayLabel: "Replay 🔄",
+  finaleSubtext: "I Love You more than any words i could ever say! Just be my forever bishhh🥰",
+  replayLabel: "Maruka same scenes 🔄",
   kissingGifUrl:
     "/public/Love You Cat GIF.gif",
 };
