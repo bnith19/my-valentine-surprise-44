@@ -21,8 +21,8 @@ export const config = {
   // Section 3: Photo Collage
   collageTitle: "Our Favourite Moments 📸",
   images: [
-    "/images/img-1.jpg",
-    "/images/img-2.jpg",
+    "/public/img-1.jpg",
+    "/public/img-2.jpg",
     "https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?w=400&h=400&fit=crop",
     "https://images.unsplash.com/photo-1522673607200-164d1b3ce551?w=400&h=400&fit=crop",
     "https://images.unsplash.com/photo-1543931412-46ee4ef52335?w=400&h=400&fit=crop",
@@ -46,5 +46,5 @@ export const config = {
   finaleSubtext: "I Love You more than any words i could ever say! Be my forever bishhh🥰",
   replayLabel: "Replay 🔄",
   kissingGifUrl:
-    "https://media.giphy.com/media/3oEjHV0z8S7WM4MwnK/giphy.gif",
+    "/public/Love You Cat GIF.gif",
 };
